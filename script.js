@@ -24,6 +24,15 @@ generateBtn.addEventListener('click', writePassword);
 
 // Write password to the #password input
 function writePassword() {
+  const correctPrompts = getPasswordOptions();
+  const passwordText = document.querySelector('#password');
+  
+  if (correctPrompts) {
+    let newPassword = generatePassword();
+    passwordText.value = newPassword;
+  } else {
+    passwordText.value = "";
+  }
 }
 
 // Function to prompt user for password options
