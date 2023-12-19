@@ -38,6 +38,22 @@ function getPasswordOptions() {
       break;
     }
   }
+
+  if (confirm('Would you like to include special characters in your password? Hit OK for yes, and Cancel for No.')) {
+    charOptions = charOptions.concat(specialCharacters)
+  }
+
+  if (confirm('Would you like to include numbers in your password? Hit OK for yes, and Cancel for No.')) {
+    charOptions = charOptions.concat(numericCharacters)
+  }
+  
+  if (confirm('Would you like to include lowercase letters in your password? Hit OK for yes, and Cancel for No.')){
+    charOptions = charOptions.concat(lowerCasedCharacters)
+  }
+  
+  if (confirm('Would you like to include uppercase letters in your password? Hit OK for yes, and Cancel for No.')) {
+    charOptions = charOptions.concat(upperCasedCharacters)
+  };
 }
 
 // Function to generate password with user input
