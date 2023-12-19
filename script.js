@@ -37,6 +37,7 @@ function writePassword() {
 
 // Function to prompt user for password options
 function getPasswordOptions() {
+
   charOptions = [];
   
   while(true) {
@@ -74,10 +75,9 @@ function getPasswordOptions() {
     if (selectedCharTypes === 0) {
       alert('Please select at least one character type.');
     }
-
+  }
     return true;
   }
-}
 
 // Function to generate password with user input
 function generatePassword() {
