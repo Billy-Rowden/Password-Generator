@@ -34,6 +34,8 @@ function getPasswordOptions() {
     characterLength = parseInt(prompt("How long would you like your password to be? Choose a length between 8 and 128 characters."));
     if (isNaN(characterLength) || characterLength < 8 || characterLength > 128) {
       alert('Please enter a length between 8 and 128.');
+    } else {
+      break;
     }
   }
 }
