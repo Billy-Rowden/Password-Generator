@@ -1,5 +1,5 @@
 # Password-Generator
-## Program that will allow a user to generate a password given certain criteria. 
+## Program that will allow a user to generate a random password given certain criteria. 
 
 ## Description 
 
