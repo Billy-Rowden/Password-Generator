@@ -65,8 +65,17 @@ function getPasswordOptions() {
     if (selectedCharTypes === 0) {
       alert('Please select at least one character type.');
     }
+
+    return true;
+  }
 }
 
 // Function to generate password with user input
 function generatePassword() {
+  let password = "";
+  for (let i = 0; i < characterLength; i++) {
+    var randomIndex = Math.floor(Math.random() * charOptions.length);
+    password = password + charOptions[randomIndex];
+  }
+  return password;
 }
