@@ -39,21 +39,32 @@ function getPasswordOptions() {
     }
   }
 
-  if (confirm('Would you like to include special characters in your password? Hit OK for yes, and Cancel for No.')) {
-    charOptions = charOptions.concat(specialCharacters)
-  }
+  let selectedCharTypes = 0;
 
-  if (confirm('Would you like to include numbers in your password? Hit OK for yes, and Cancel for No.')) {
-    charOptions = charOptions.concat(numericCharacters)
-  }
-  
-  if (confirm('Would you like to include lowercase letters in your password? Hit OK for yes, and Cancel for No.')){
-    charOptions = charOptions.concat(lowerCasedCharacters)
-  }
-  
-  if (confirm('Would you like to include uppercase letters in your password? Hit OK for yes, and Cancel for No.')) {
-    charOptions = charOptions.concat(upperCasedCharacters)
-  };
+  while (selectedCharTypes === 0) {
+    if (confirm('Would you like to include special characters in your password? Hit OK for yes, and Cancel for No.')) {
+      charOptions = charOptions.concat(specialCharacters)
+      selectedCharTypes++;
+    }
+    
+    if (confirm('Would you like to include numbers in your password? Hit OK for yes, and Cancel for No.')) {
+      charOptions = charOptions.concat(numericCharacters)
+      selectedCharTypes++;
+    }
+    
+    if (confirm('Would you like to include lowercase letters in your password? Hit OK for yes, and Cancel for No.')){
+      charOptions = charOptions.concat(lowerCasedCharacters)
+      selectedCharTypes++;
+    }
+    
+    if (confirm('Would you like to include uppercase letters in your password? Hit OK for yes, and Cancel for No.')) {
+      charOptions = charOptions.concat(upperCasedCharacters)
+      selectedCharTypes++;
+    };
+
+    if (selectedCharTypes === 0) {
+      alert('Please select at least one character type.');
+    }
 }
 
 // Function to generate password with user input
