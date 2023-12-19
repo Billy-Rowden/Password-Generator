@@ -28,6 +28,14 @@ function writePassword() {
 
 // Function to prompt user for password options
 function getPasswordOptions() {
+  charOptions = [];
+  
+  while(true) {
+    characterLength = parseInt(prompt("How long would you like your password to be? Choose a length between 8 and 128 characters."));
+    if (isNaN(characterLength) || characterLength < 8 || characterLength > 128) {
+      alert('Please enter a length between 8 and 128.');
+    }
+  }
 }
 
 // Function to generate password with user input
